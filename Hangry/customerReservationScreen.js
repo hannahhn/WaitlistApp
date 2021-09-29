@@ -1,32 +1,9 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-//import { StyleSheet, Text, View } from 'react-native';
-
-// export default function App() {
-//   return (
-//     <View style={styles.container}>
-//       <Text>Hangry</Text>
-//       <StatusBar style="auto" />
-//     </View>
-//   );
-// }
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
-
-
-//import * as React from 'react';
+import * as React from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 import Constants from 'expo-constants';
 
 // You can import from local files
-//import AssetExample from './components/AssetExample';
+import AssetExample from './components/AssetExample';
 
 // or any pure javascript modules available in npm
 // import { Card } from 'react-native-paper';
