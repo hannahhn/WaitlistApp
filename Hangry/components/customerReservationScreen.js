@@ -7,35 +7,38 @@ import { Text, View, StyleSheet, Button } from 'react-native';
 
 // or any pure javascript modules available in npm
 // import { Card } from 'react-native-paper';
-
-export default function App() {
+const customerReservationScreen = () => {
   return (
-    <View style={styles.paragraph}>
-      <Text style={styles.paragraph}>
-        Make a Reservation
-      </Text>
-      <Button
-        title="Pick a Date"
-        color = 'red'
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
-      <Button
-        title="Choose Party Size"
-        color = 'purple'
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
-      <Button
-        title="Pick a time"
-        color = 'green'
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
-      <Button
-        title="Submit Reservation"
-        onPress={() => Alert.alert('Simple Button pressed')}
-      />
-    </View>
-  );
+      <View style={styles.paragraph}>
+        <Text style={styles.paragraph}>
+          Make a Reservation
+        </Text>
+        <Button
+          title="Pick a Date"
+          color = 'red'
+          onPress={() => Alert.alert('Simple Button pressed')}
+        />
+        <Button
+          title="Choose Party Size"
+          color = 'purple'
+          onPress={() => Alert.alert('Simple Button pressed')}
+        />
+        <Button
+          title="Pick a time"
+          color = 'green'
+          onPress={() => Alert.alert('Simple Button pressed')}
+        />
+        <Button
+          title="Submit Reservation"
+          onPress={() => Alert.alert('Simple Button pressed')}
+        />
+      </View>
+
+  )
+
 }
+
+
 
 const styles = StyleSheet.create({
   // container: {
@@ -53,3 +56,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+
+export default customerReservationScreen
