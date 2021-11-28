@@ -53,7 +53,8 @@ const customerReservationScreen = () => {
         onPress={() => Alert.alert('Party Size pressed')}
       />
       <ScrollPicker
-        dataSource={['1', '2', '3', '4', '5', '6']}
+        title="Select Party Size"
+        dataSource={['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']}
         selectedIndex={1}
         renderItem={(data, index) => {
           //
@@ -63,10 +64,12 @@ const customerReservationScreen = () => {
         }}
         wrapperHeight={180}
         wrapperWidth={150}
-        wrapperBackground='#FFFFFF'
+        wrapperBackground={'#000'}
         itemHeight={60}
-        highlightColor='#d8d8d8'
+        highlightColor={'#d8d8d8'}
         highlightBorderWidth={2}
+        activeItemColor={'#222121'}
+        itemColor={'#B4B4B4'}
       />
       <Button
         title="Submit Reservation"
