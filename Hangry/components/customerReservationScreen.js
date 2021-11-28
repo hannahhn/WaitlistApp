@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Text, View, StyleSheet, Button, Alert } from 'react-native';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import moment from 'moment';
+import ScrollPicker from 'react-native-wheel-scrollview-picker';
+
 //import Constants from 'expo-constants';
 
 // You can import from local files
@@ -50,11 +52,28 @@ const customerReservationScreen = () => {
         title="Choose Party Size"
         onPress={() => Alert.alert('Party Size pressed')}
       />
+      <ScrollPicker
+        dataSource={['1', '2', '3', '4', '5', '6']}
+        selectedIndex={1}
+        renderItem={(data, index) => {
+          //
+        }}
+        onValueChange={(data, selectedIndex) => {
+          //
+        }}
+        wrapperHeight={180}
+        wrapperWidth={150}
+        wrapperBackground='#FFFFFF'
+        itemHeight={60}
+        highlightColor='#d8d8d8'
+        highlightBorderWidth={2}
+      />
       <Button
         title="Submit Reservation"
         onPress={() => Alert.alert('Submit Reservation pressed')}
       />
     </View>
+    
 
   )
 
