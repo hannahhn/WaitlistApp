@@ -4,17 +4,11 @@ import DateTimePickerModal from "react-native-modal-datetime-picker";
 import moment from 'moment';
 import ScrollPicker from 'react-native-wheel-scrollview-picker';
 
-//import Constants from 'expo-constants';
 
-// You can import from local files
-//import AssetExample from './components/AssetExample';
-
-// or any pure javascript modules available in npm
-// import { Card } from 'react-native-paper';
-//
 const customerReservationScreen = () => {
+  
+  const [date, setDate] = useState(new Date());
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
-
 
   const showDatePicker = () => {
     setDatePickerVisibility(true);
@@ -25,29 +19,33 @@ const customerReservationScreen = () => {
 
   };
 
-  const handleConfirm = (datetime) => {
-    chosenDate = ''
-    console.log("You selected this date: ", datetime);
+  const handleConfirm = (date) => {
+    //chosenDate = ''
+    console.log("You selected this date: ", date);
+    setDate(date)
     hideDatePicker();
-    chosenDate: moment(datetime).format('MMMM, Do YYYY HH:mm')
+    console.log(date.toString())
+    //chosenDate: moment(datetime).format('MMMM, Do YYYY HH:mm')
   };
 
   return (
     <View style={styles.paragraph}>
+
       <Text style={{ color: 'black' }}>
         Make a Reservation
       </Text>
-      <Text style={{ color: 'red' }}>
-        {handleConfirm}
-      </Text>
+
       <Button title="Select Date and Time" onPress={showDatePicker} />
       <DateTimePickerModal
         isVisible={isDatePickerVisible}
         mode="datetime"
         onConfirm={handleConfirm}
         onCancel={hideDatePicker}
-        timeZoneOffsetInMinutes={0}
-      />
+        //timeZoneOffsetInMinutes={0}
+      />      
+      <Text style={{ color: 'red' }}>
+        {date.toString()}
+      </Text>
       <Button
         title="Choose Party Size"
         onPress={() => Alert.alert('Party Size pressed')}
