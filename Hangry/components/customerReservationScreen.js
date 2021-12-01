@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, Button, Alert, Picker } from 'react-native';
+import { Text, View, StyleSheet, Button, Alert, Picker, TextInput } from 'react-native';
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import moment from 'moment';
 import ScrollPicker from 'react-native-wheel-scrollview-picker';
@@ -7,6 +7,7 @@ import ScrollPicker from 'react-native-wheel-scrollview-picker';
 
 const customerReservationScreen = () => {
 
+  const [text, onChangeText] = React.useState("Enter Fullname");
   const [selectedValue, setSelectedValue] = useState("1");
   
   const [date, setDate] = useState(new Date());
@@ -37,6 +38,11 @@ const customerReservationScreen = () => {
       <Text style={{ color: 'black' }}>
         Make a Reservation
       </Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={onChangeText}
+        value={text}
+      />
 
       <Button title="Select Date and Time" onPress={showDatePicker} />
       <DateTimePickerModal
@@ -93,6 +99,12 @@ const styles = StyleSheet.create({
   //   backgroundColor: '#f5fcff',
   //   color: 'black',
   // },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
   paragraph: {
     flex: 1,
     marginTop: 10,
