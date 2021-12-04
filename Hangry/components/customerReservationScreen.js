@@ -3,13 +3,33 @@ import { Text, View, StyleSheet, Button, Alert, Picker, TextInput } from 'react-
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import moment from 'moment';
 import ScrollPicker from 'react-native-wheel-scrollview-picker';
+import { NavigationContainer } from '@react-navigation/native';
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+
+// const Tab = createBottomTabNavigator();
+
+// function Menu() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Menu!</Text>
+//     </View>
+//   );
+// }
+
+// function Reservation() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Reservation!</Text>
+//     </View>
+//   );
+// }
 
 const customerReservationScreen = () => {
 
   const [text, onChangeText] = React.useState("Enter Fullname");
   const [selectedValue, setSelectedValue] = useState("1");
-  
+
   const [date, setDate] = useState(new Date());
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
 
@@ -83,8 +103,47 @@ const customerReservationScreen = () => {
         title="Submit Reservation"
         onPress={() => Alert.alert('Submit Reservation pressed')}
       />
+     {/* <Tab.Navigator
+      tabBarOptions={{
+        inactiveBackgroundColor: "#646669",
+        activeBackgroundColor: "#646669",
+        activeTintColor: "#FFFFFF",
+        inactiveTintColor: "#8B8B8B",
+      }}
+    >
+      <Tab.Screen
+        name={"Menu"}
+        component={Menu}
+        options={{
+          tabBarLabel: "Menu",
+        }}
+      />
+      <Tab.Screen
+        name="Reservation"
+        component={Reservation}
+        options={{
+          tabBarLabel: "Reservation",
+        }}
+      />
+      {/* <Tab.Screen
+        name={"Profile"}
+        component={Profile}
+        options={{
+          tabBarLabel: "Profile",
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="user" color={color} size={23} />
+          ),
+        }}
+      /> */}
+    {/* </Tab.Navigator> } */}
     </View>
     
+    // <View style={styles.bottomView}>
+    //   <Button title="Waitlist" onPress={() => Alert.alert('Waitlist pressed')} color="red" />
+    //   <Button title="Menu" onPress={() => Alert.alert('Menu pressed')} color="red" />
+    //   <Button title="Reservation" onPress={() => Alert.alert('Reservation pressed')} color="blue" />
+    // </View>
+
 
   )
 
