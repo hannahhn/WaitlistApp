@@ -3,6 +3,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Customerside_Menu from './components/costumerside_menu';
 import Waitlist from './components/waitlist';
+import Reservation from './components/reservation';
+import Confirmation from './components/confirmation';
 
 import { NativeRouter, Route, Link } from "react-router-native";
 import { NavigationContainer } from '@react-navigation/native';
@@ -14,6 +16,8 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Customerside_Menu} />
         <Stack.Screen name="Waitlist" component={Waitlist} />
+        <Stack.Screen name="Reservation" component={Reservation} />
+        <Stack.Screen name="Confirmation" component={Confirmation} />
       </Stack.Navigator>
     </NavigationContainer>
 
