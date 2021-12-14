@@ -11,13 +11,13 @@ const waitlist = () => {
           <Text style={styles.header1}>Customer Wait List</Text>
         </View>
         <View>
-          <Text style={styles.waitlist}>Name                                                Time </Text>
-          <Text>1. John Doe                                                             10:30 am </Text>
-        <Text>2. Travis Bakker                                                       11:30 am </Text>
-          <Text>3. Sanjaya KC                                                           12:00 pm </Text>
-          <Text>4. Lucky Bhai                                                            14:00 pm </Text>
-          <Text>5. Mr. Monchite                                                        15:30 pm </Text>
-          <Text>6. Fadiah Qudah                                                       18:00 pm </Text>
+          <Text style={styles.waitlist}>Name                                                Size </Text>
+          <Text>1. John Doe                                                             4 </Text>
+        <Text>2. Travis Bakker                                                       7 </Text>
+          <Text>3. Sanjaya KC                                                           8 </Text>
+          <Text>4. Lucky Bhai                                                            3 </Text>
+          <Text>5. Mr. Monchite                                                        5 </Text>
+          <Text>6. Fadiah Qudah                                                       2 </Text>
         </View>
       </View>
 
