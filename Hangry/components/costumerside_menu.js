@@ -18,7 +18,7 @@ const costumerside_menu = ({ navigation }) => {
       <View style={styles.bottomView}>
         <Button title="Waitlist" onPress={() => navigation.navigate('Waitlist')} color="green" />
         <Button title="Menu" onPress={() => Alert.alert('Menu pressed')} color="red" />
-        <Button title="Reservation" onPress={() => Alert.alert('Reservation pressed')} color="blue" />
+        <Button title="Reservation" onPress={() => navigation.navigate('Reservation')} color="blue" />
       </View>
 
     </React.Fragment>
