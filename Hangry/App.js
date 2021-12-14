@@ -1,17 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import CustomerReservation from 'C:/Users/samvi/Desktop/School/Courses/CSE4317/WaitlistApp/Hangry/components/customerReservationScreen';
-import Navigator from "C:/Users/samvi/Desktop/School/Courses/CSE4317/WaitlistApp/Hangry/navigation/Navigator";
+//import CustomerReservation from 'C:/Users/samvi/Desktop/School/Courses/CSE4317/WaitlistApp/Hangry/components/customerReservationScreen';
+//import Navigator from "C:/Users/samvi/Desktop/School/Courses/CSE4317/WaitlistApp/Hangry/navigation/Navigator";
+import Customerside_Menu from './components/costumerside_menu';
+import Waitlist from './components/waitlist';
 
+import { NativeRouter, Route, Link } from "react-router-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 export default function App() {
+  const Stack = createNativeStackNavigator();
   return (
-    <Navigator/>
-    // <View style={styles.container}>
-    //   <CustomerReservation/>
-    //   {/*<Text>Hangry</Text>*/}
-    //   <StatusBar style="auto" />
-    // </View>
+    // <Navigator/>
+    // // <View style={styles.container}>
+    // //   <CustomerReservation/>
+    // //   {/*<Text>Hangry</Text>*/}
+    // //   <StatusBar style="auto" />
+    // // </View>
+    <NavigationContainer initialRouteName="Home">
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Customerside_Menu} />
+        <Stack.Screen name="Waitlist" component={Waitlist} />
+      </Stack.Navigator>
+    </NavigationContainer>
+
   );
 }
 
