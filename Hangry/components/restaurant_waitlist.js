@@ -21,7 +21,7 @@ const restaurant_waitlist = () => {
       </View>
 
       <View style={styles.bottomView}>
-        <Button title="Edit" onPress={() => Alert.alert('Edit Reservation')} style = {styles.edit}/>
+        <Button title="Delete" onPress={() => Alert.alert('Edit Reservation')} style = {styles.edit}/>
         <Button title="Submit" onPress={() => navigation.navigate('Confirmation')} color="white" />
         {/* <Button title="Reservation" onPress={() => Alert.alert('Reservation pressed')} color="blue" /> */}
       </View>
