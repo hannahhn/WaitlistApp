@@ -1,8 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-//import CustomerReservation from 'C:/Users/samvi/Desktop/School/Courses/CSE4317/WaitlistApp/Hangry/components/customerReservationScreen';
-//import Navigator from "C:/Users/samvi/Desktop/School/Courses/CSE4317/WaitlistApp/Hangry/navigation/Navigator";
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 import LandingScreen from './components/LandingScreen'
 import RestaurantLoginScreen from './components/RestaurantLoginScreen'
@@ -16,21 +13,30 @@ import Confirmation from './components/confirmation';
 import Restaurant_waitlist from './components/restaurant_waitlist';
 import Restaurant_reservation from './components/Restaurant_reservation';
 
-import { NativeRouter, Route, Link } from "react-router-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+
+function Logo() {
+  return (
+    <Image
+      style={{ width: 100, height: 40, bottom: 5 }}
+      source={require('./assets/HangryLogo.png')}
+    />
+  );
+}
+
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
-    // <Navigator/>
-    // // <View style={styles.container}>
-    // //   <CustomerReservation/>
-    // //   {/*<Text>Hangry</Text>*/}
-    // //   <StatusBar style="auto" />
-    // // </View>
-    // <NavigationContainer initialRouteName="Home">
     <NavigationContainer initialRouteName="Landing Screen">
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#f2afa3'
+          },
+          headerTitle: (props) => <Logo {...props} />
+        }}
+      >
         <Stack.Screen name="Landing Screen" 
                       component={LandingScreen} 
                       options={{
