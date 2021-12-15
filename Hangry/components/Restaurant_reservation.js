@@ -55,9 +55,10 @@ const reservation = ({ navigation }) => {
         <View style={styles.editButtons}>
           <Button title="Submit" onPress={() => navigation.navigate('Confirmation')} color="white" />
         </View>
-        <View style={styles.editButtons}>
-          <Button title="Waitlist" onPress={() => navigation.navigate('Restaurant_waitlist')} color="white" />
-        </View>
+      </View>
+
+      <View style={styles.bottomView}>
+        <Button title="Waitlist" onPress={() => navigation.navigate('Restaurant_waitlist')} color="white" />
       </View>
     </ImageBackground>
 
@@ -112,7 +113,7 @@ const styles = StyleSheet.create({
   },
   editButtons: {
     height: 50,
-    width: 100,
+    width: 150,
     backgroundColor: '#9e5c5c',
     padding: 5,
     borderRadius: 15,

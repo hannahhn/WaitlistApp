@@ -82,7 +82,8 @@ const styles = StyleSheet.create({
         width: "70%",
         margin: 20,
         backgroundColor: "#FBFBFF",
-        borderRadius: 5
+        borderRadius: 5,
+        color: 'black'
     },
     SubmitIcon: {
         marginRight: 10
