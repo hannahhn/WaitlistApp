@@ -75,10 +75,6 @@ const customerReservationScreen = () => {
       <Text style={{ color: 'red' }}>
         {date.toString()}
       </Text>
-      {/* <Button
-        title="Choose Party Size"
-        onPress={() => Alert.alert('Party Size pressed')}
-      /> */}
       <Text style={{ color: 'black' }}>
         Choose Party Size
       </Text>
@@ -101,7 +97,7 @@ const customerReservationScreen = () => {
       </Picker>
       <Button
         title="Submit Reservation"
-        onPress={() => console.log('Submit Reservation pressed')}
+        onPress={() => Alert.alert('Reservation has been sent!')}
       />
      {/* <Tab.Navigator
       tabBarOptions={{
