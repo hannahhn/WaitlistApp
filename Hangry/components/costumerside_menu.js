@@ -16,9 +16,9 @@ const costumerside_menu = ({ navigation }) => {
         <Image source={MenuImage} style={styles.menuIcon} />
       </View>
       <View style={styles.bottomView}>
-        <Button title="Waitlist" onPress={() => navigation.navigate('Waitlist')} color="green" />
+        <Button title="Waitlist" onPress={() => navigation.navigate('Restaurant_waitlist')} color="green" />
         <Button title="Menu" onPress={() => Alert.alert('Menu pressed')} color="red" />
-        <Button title="Reservation" onPress={() => navigation.navigate('Reservation')} color="blue" />
+        <Button title="Reservation" onPress={() => navigation.navigate('Restaurant_reservation')} color="blue" />
       </View>
 
     </React.Fragment>

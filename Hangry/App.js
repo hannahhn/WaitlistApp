@@ -2,8 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Customerside_Menu from './components/costumerside_menu';
-import Waitlist from './components/waitlist';
-import Reservation from './components/reservation';
+import Restaurant_waitlist from './components/restaurant_waitlist';
+import Restaurant_reservation from './components/Restaurant_reservation';
 import Confirmation from './components/confirmation';
 
 import { NativeRouter, Route, Link } from "react-router-native";
@@ -15,8 +15,8 @@ export default function App() {
     <NavigationContainer initialRouteName="Home">
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Customerside_Menu} />
-        <Stack.Screen name="Waitlist" component={Waitlist} />
-        <Stack.Screen name="Reservation" component={Reservation} />
+        <Stack.Screen name="Restaurant_waitlist" component={Restaurant_waitlist} />
+        <Stack.Screen name="Restaurant_reservation" component={Restaurant_reservation} />
         <Stack.Screen name="Confirmation" component={Confirmation} />
       </Stack.Navigator>
     </NavigationContainer>

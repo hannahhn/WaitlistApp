@@ -3,7 +3,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import { Button, Alert, StyleSheet, Image } from 'react-native'
 import MenuImage from '../assets/menu.jpg';
-const waitlist = () => {
+const restaurant_waitlist = () => {
   return (
     <React.Fragment>
       <View style={styles.main}>
@@ -11,13 +11,19 @@ const waitlist = () => {
           <Text style={styles.header1}>Customer Wait List</Text>
         </View>
         <View>
-          <Text style={styles.waitlist}>Name                                                 Time </Text>
-          <Text>1. John Doe                                   10:30 am </Text>
-          <Text>2. Jason Losh                                 11:30 am </Text>
-          <Text>3. Sanjaya KC                                 12:00 pm </Text>
-          <Text>4. Lucky Bhai                                 02:00 pm </Text>
-          <Text>5. Mr. Monchite                               03:30 pm </Text>
+          <Text style={styles.waitlist}>Name                                                 Size </Text>
+          <Text>1. Hannah Nguyen                                              3 </Text>
+          <Text>2. Chris Cross                                                     2 </Text>
+          <Text>3. Tu Yung                                                           1 </Text>
+          <Text>4. Steph Bro                                                        6 </Text>
+          <Text>5. Alex Ha                                                            4 </Text>
         </View>
+      </View>
+
+      <View style={styles.bottomView}>
+        <Button title="Edit" onPress={() => Alert.alert('Edit Reservation')} style = {styles.edit}/>
+        <Button title="Submit" onPress={() => navigation.navigate('Confirmation')} color="white" />
+        {/* <Button title="Reservation" onPress={() => Alert.alert('Reservation pressed')} color="blue" /> */}
       </View>
 
     </React.Fragment>
@@ -90,4 +96,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default waitlist
+export default restaurant_waitlist
