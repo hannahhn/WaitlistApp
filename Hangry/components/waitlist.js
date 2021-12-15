@@ -11,12 +11,12 @@ const waitlist = () => {
           <Text style={styles.header1}>Customer Wait List</Text>
         </View>
         <View style={styles.boxBorder}>
-          <Text style={styles.waitlist}>Name                                 Time </Text>
-          <Text>1. John Doe                                   10:30 am </Text>
-          <Text>2. Rajiv Sakuni                                 11:30 am </Text>
-          <Text>3. Sanjaya KC                                 12:00 pm </Text>
-          <Text>4. Lucky Bhai                                 02:00 pm </Text>
-          <Text>5. Mr. Monchite                               03:30 pm </Text>
+          <Text style={styles.waitlist}>Name                                 Size </Text>
+          <Text>1. John Doe                                               3 </Text>
+          <Text>2. Chris Cross                                            2 </Text>
+          <Text>3. Tu Yung                                                  1 </Text>
+          <Text>4. Steph Bro                                               6</Text>
+          <Text>5. Alex Ha                                                  4 </Text>
         </View>
       </View>
        <View style = {styles.div}>
@@ -27,7 +27,7 @@ const waitlist = () => {
         <TextInput  style={styles.input}  placeholder = "Enter size"  value={Text}  keyboardType="numeric"/>
         </View>
         <View>
-        <Button title="Add to Waitlist" onPress={() => Alert.alert('Added to wailtlist')} color="blue" />
+        <Button title="Add to Waitlist" onPress={() => Alert.alert('Added to waitlist')} color="blue" />
         </View>
         </View>
         </ImageBackground>

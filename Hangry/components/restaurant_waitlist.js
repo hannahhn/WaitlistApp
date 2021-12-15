@@ -11,12 +11,12 @@ const restaurant_waitlist = ({ navigation }) => {
         </View>
         <View style={styles.boxBorder}>
           <Text style={styles.waitlist}>Name                                                 Size </Text>
-          <Text>1. Hannah Nguyen                                              3 </Text>
-          <Text>2. Chris Cross                                                     2 </Text>
-          <Text>3. Tu Yung                                                           1 </Text>
-          <Text>4. Steph Bro                                                        6 </Text>
-          <Text>5. Alex Ha                                                            4 </Text>
-        </View>
+          <Text>1. John Doe                                                               3 </Text>
+          <Text>2. Chris Cross                                                            2 </Text>
+          <Text>3. Tu Yung                                                                  1 </Text>
+          <Text>4. Steph Bro                                                              6 </Text>
+          <Text>5. Alex Ha                                                                  4 </Text>
+        </View> 
       </View>
 
       <View style={styles.buttonsContainer}>
