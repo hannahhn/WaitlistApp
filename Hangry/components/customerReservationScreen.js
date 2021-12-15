@@ -101,7 +101,7 @@ const customerReservationScreen = () => {
       </Picker>
       <Button
         title="Submit Reservation"
-        onPress={() => Alert.alert('Submit Reservation pressed')}
+        onPress={() => console.log('Submit Reservation pressed')}
       />
      {/* <Tab.Navigator
       tabBarOptions={{
