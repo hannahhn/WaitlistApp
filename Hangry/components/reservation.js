@@ -1,7 +1,7 @@
 
 import React, {useState} from 'react'
 import { SafeAreaView ,View, Text } from 'react-native'
-import { Button, Alert, StyleSheet, Image } from 'react-native'
+import { Button, Alert, StyleSheet, Image, ImageBackground } from 'react-native'
 import MenuImage from '../assets/menu.jpg';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -32,7 +32,8 @@ const reservation = ({ navigation }) => {
     };
 
   return (
-    <React.Fragment>
+    <ImageBackground source={require('../assets/AppBackground.png')} style={styles.backgroundContainer}>
+      
       <View>
         <Text style={styles.header}>Restaurant User</Text>
       </View>
@@ -56,16 +57,17 @@ const reservation = ({ navigation }) => {
         <Button title="Submit" onPress={() => navigation.navigate('Confirmation')} color="white" />
         <Button title="Waitlist" onPress={() => navigation.navigate('Waitlist')} color="black" />
         <Button title="Menu" onPress={() => Alert.alert('Menu pressed')} color="purple" />
-        {/* <Button title="Reservation" onPress={() => Alert.alert('Reservation pressed')} color="blue" /> */}
       </View>
 
-    </React.Fragment>
+    </ImageBackground>
 
   )
 }
 
 const styles = StyleSheet.create({
-
+  backgroundContainer: {
+    flex: 1
+  },
   header: {
     backgroundColor: 'red',
     fontSize: 30,
@@ -75,17 +77,6 @@ const styles = StyleSheet.create({
     top: 20
     // bottom: 20
   },
-
-  menuIcon: {
-
-    top: 50,
-    left: 30,
-    height: 400,
-    width: 350
-
-
-  },
-
   containerMain: {
     flex: 1,
     alignItems: 'center',

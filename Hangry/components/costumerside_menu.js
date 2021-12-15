@@ -13,11 +13,9 @@ const costumerside_menu = ({ navigation }) => {
       <Image source={MenuImage} style={styles.menuIcon}/>
       <View style={styles.bottomView}>
         <Button title="Waitlist" onPress={() => navigation.navigate('Waitlist')} color="white" />
-        <Button title="Menu" onPress={() => Alert.alert('Menu pressed')} color="white" />
         <Button title="Reservation" onPress={() => navigation.navigate('Reservation')} color="white" />
       </View>
     </ImageBackground>
-
   )
 }
 
@@ -60,7 +58,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#9e5c5c',
     justifyContent: 'space-around',
     position: 'absolute', //Here is the trick
-    bottom: 0, //Here is the trick
+    bottom: 0, //Here is the trick,
+    paddingTop: 10
   },
   textStyle: {
     color: '#fff',

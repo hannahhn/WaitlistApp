@@ -18,7 +18,7 @@ export default function RestaurantLoginScreen({ navigation }) {
                     </TouchableOpacity>   
                     <Text style={styles.EnterPasswordText}>Enter Password:</Text>
                     <View style={styles.InputContainer}>
-                        <TextInput value={inputPassword} onChangeText = {(inputPassword) => setPassword(inputPassword)} placeholder="Password" secureTextEntry={true} style={styles.PasswordInputBox}></TextInput>
+                        <TextInput value={inputPassword} onChangeText = {(inputPassword) => setPassword(inputPassword)} placeholder="Password" placeholderTextColor='gray' secureTextEntry={true} style={styles.PasswordInputBox}></TextInput>
                         <TouchableOpacity>
                             <FontAwesomeIcon icon={ faArrowRight } color={'white'} size={40} style={styles.SubmitIcon} onPress={() => {
                                                                                                                                         if(inputPassword == "12345") 
