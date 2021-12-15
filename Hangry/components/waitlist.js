@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { View, Text, ImageBackground } from 'react-native'
-import { Button, Alert, StyleSheet, Image } from 'react-native'
+import { Button, Alert, StyleSheet, Image, TextInput } from 'react-native'
 import MenuImage from '../assets/menu.jpg';
 const waitlist = () => {
   return (
@@ -13,15 +13,26 @@ const waitlist = () => {
         <View style={styles.boxBorder}>
           <Text style={styles.waitlist}>Name                                 Time </Text>
           <Text>1. John Doe                                   10:30 am </Text>
-          <Text>2. Jason Losh                                 11:30 am </Text>
+          <Text>2. Rajiv Sakuni                                 11:30 am </Text>
           <Text>3. Sanjaya KC                                 12:00 pm </Text>
           <Text>4. Lucky Bhai                                 02:00 pm </Text>
           <Text>5. Mr. Monchite                               03:30 pm </Text>
         </View>
       </View>
-
-    </ImageBackground>
-
+       <View style = {styles.div}>
+        <View>
+        <TextInput style={styles.input} placeholder = "Enter name" value={Text} />
+        </View>
+        <View>
+        <TextInput  style={styles.input}  placeholder = "Enter size"  value={Text}  keyboardType="numeric"/>
+        </View>
+        <View>
+        <Button title="Add to Waitlist" onPress={() => Alert.alert('Added to wailtlist')} color="blue" />
+        </View>
+        </View>
+        </ImageBackground>
+        
+   
   )
 }
 
@@ -42,6 +53,25 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 10
   },  
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  },
+
+  div:
+  {
+    top:40,
+    backgroundColor: '#42f5e3'
+  },
+
+  main:
+  {
+    backgroundColor: '#d1c3c0'
+
+  },
+
   header1: {
     color: 'white',
     fontSize: 30,
