@@ -1,17 +1,17 @@
 
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, ImageBackground } from 'react-native'
 import { Button, Alert, StyleSheet, Image } from 'react-native'
 import MenuImage from '../assets/menu.jpg';
 const waitlist = () => {
   return (
-    <React.Fragment>
+    <ImageBackground source={require('../assets/AppBackground.png')} style={styles.backgroundContainer}>
       <View style={styles.main}>
         <View>
           <Text style={styles.header1}>Customer Wait List</Text>
         </View>
-        <View>
-          <Text style={styles.waitlist}>Name                                                 Time </Text>
+        <View style={{ borderColor: 'white', borderWidth: 2, padding: 10 }}>
+          <Text style={styles.waitlist}>Name                                 Time </Text>
           <Text>1. John Doe                                   10:30 am </Text>
           <Text>2. Jason Losh                                 11:30 am </Text>
           <Text>3. Sanjaya KC                                 12:00 pm </Text>
@@ -20,16 +20,16 @@ const waitlist = () => {
         </View>
       </View>
 
-    </React.Fragment>
+    </ImageBackground>
 
   )
 }
 
 const styles = StyleSheet.create({
-
-
+  backgroundContainer: {
+    flex: 1
+  },
   header: {
-    position: 'absolute',
     top: -200,
     left: -90,
     backgroundColor: 'red',
@@ -37,38 +37,33 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'black',
     borderRadius: 4
-
   },
-  main:
-  {
-    backgroundColor: '#d1c3c0'
-
-  },
-
+  main: {
+    flex: 1,
+    margin: 10
+  },  
   header1: {
-    position: 'absolute',
-    top: -300,
-    left: 35,
-    backgroundColor: 'green',
+    color: 'white',
     fontSize: 30,
-    borderWidth: 2,
-    borderColor: 'black',
-    borderRadius: 4
-
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    marginTop: 25,
+    marginBottom: 15
   },
   waitlist: {
-    backgroundColor: 'orange',
     fontSize: 20,
     borderWidth: 2,
-    borderColor: 'black',
-    borderRadius: 4
+    borderColor: 'white',
+    borderRadius: 4,
+    padding: 5,
+    color: 'white',
+    fontWeight: 'bold',
+    marginBottom: 10
   },
-
   menuIcon: {
     height: 400,
     width: 350
   },
-
   containerMain: {
     flex: 1,
     alignItems: 'center',

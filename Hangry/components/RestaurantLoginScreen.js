@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, Text, Image, ImageBackground, StyleSheet, ScrollView, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, ImageBackground, StyleSheet, ScrollView, TouchableOpacity, TextInput } from 'react-native'
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faLongArrowAltLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
@@ -21,7 +21,7 @@ export default function RestaurantLoginScreen({ navigation }) {
                         <TextInput value={inputPassword} onChangeText = {(inputPassword) => setPassword(inputPassword)} placeholder="Password" secureTextEntry={true} style={styles.PasswordInputBox}></TextInput>
                         <TouchableOpacity>
                             <FontAwesomeIcon icon={ faArrowRight } color={'white'} size={40} style={styles.SubmitIcon} onPress={() => {
-                                                                                                                                        if(inputPassword == "Password") 
+                                                                                                                                        if(inputPassword == "12345") 
                                                                                                                                         {
                                                                                                                                             navigation.navigate('Home');
                                                                                                                                             console.log("Password is Correct")
@@ -38,7 +38,6 @@ export default function RestaurantLoginScreen({ navigation }) {
                 </View>
             </ScrollView>
         </ImageBackground>
-
     )
 }
 

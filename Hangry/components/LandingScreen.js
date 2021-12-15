@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     },
     EnterApplicationText: {
         fontWeight: 'bold',
-        color: '#9a5151',
+        color: '#9e5c5c',
         fontSize: 18
     }
 });
