@@ -3,6 +3,9 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 //import CustomerReservation from 'C:/Users/samvi/Desktop/School/Courses/CSE4317/WaitlistApp/Hangry/components/customerReservationScreen';
 //import Navigator from "C:/Users/samvi/Desktop/School/Courses/CSE4317/WaitlistApp/Hangry/navigation/Navigator";
+
+import LandingScreen from './components/LandingScreen'
+import RestaurantLoginScreen from './components/RestaurantLoginScreen'
 import Customerside_Menu from './components/costumerside_menu';
 import Waitlist from './components/waitlist';
 import CustomerReservation from './components/customerReservationScreen';
@@ -19,8 +22,21 @@ export default function App() {
     // //   {/*<Text>Hangry</Text>*/}
     // //   <StatusBar style="auto" />
     // // </View>
-    <NavigationContainer initialRouteName="Home">
+    // <NavigationContainer initialRouteName="Home">
+    <NavigationContainer initialRouteName="Landing Screen">
       <Stack.Navigator>
+        <Stack.Screen name="Landing Screen" 
+                      component={LandingScreen} 
+                      options={{
+                        headerShown: false
+                      }}
+        />
+        <Stack.Screen name="Restaurant Login Screen" 
+                      component={RestaurantLoginScreen} 
+                      options={{
+                        headerShown: false
+                      }}
+        />
         <Stack.Screen name="Home" component={Customerside_Menu} />
         <Stack.Screen name="Waitlist" component={Waitlist} />
         <Stack.Screen name="Reservation" component={CustomerReservation} />
