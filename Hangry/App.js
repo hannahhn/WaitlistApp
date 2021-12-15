@@ -43,6 +43,8 @@ export default function App() {
         <Stack.Screen name="Waitlist" component={Waitlist} />
         <Stack.Screen name="Reservation" component={CustomerReservation} />
         <Stack.Screen name="Confirmation" component={Confirmation} />
+        <Stack.Screen name="Restaurant_waitlist" component={Restaurant_waitlist} />
+        <Stack.Screen name="Restaurant_reservation" component={Restaurant_reservation} />
       </Stack.Navigator>
     </NavigationContainer>
 
