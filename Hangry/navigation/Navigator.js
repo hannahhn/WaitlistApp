@@ -3,7 +3,7 @@ import Landing from "../components/LandingScreen";
 import CostumerMenu from "../components/costumerside_menu";
 import RestaurantLoginScreen from '../components/RestaurantLoginScreen'
 import Waitlist from '../components/waitlist';
-import CustomerReservation from '../components/customerReservationScreen';
+import Reservation from '../components/customerReservationScreen';
 import Confirmation from '../components/confirmation';
 import Restaurant_waitlist from '../components/restaurant_waitlist';
 import Restaurant_reservation from '../components/Restaurant_reservation';
@@ -39,9 +39,9 @@ const Navigator = (props) => {
                       headerShown: false
                     }}
       />
-      <Stack.Screen name="Home" component={CostumerMenu} />
+      <Stack.Screen name="CostumerMenu" component={CostumerMenu} />
       <Stack.Screen name="Waitlist" component={Waitlist} />
-      <Stack.Screen name="Reservation" component={CustomerReservation} />
+      <Stack.Screen name="Reservation" component={Reservation} />
       <Stack.Screen name="Confirmation" component={Confirmation} />
       <Stack.Screen name="Restaurant_waitlist" component={Restaurant_waitlist} />
       <Stack.Screen name="Restaurant_reservation" component={Restaurant_reservation} />

@@ -1,9 +1,9 @@
 import React, {useContext, useEffect} from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import CustomerReservationScreen from "../components/customerReservationScreen"
-import CostumerMenu from "../components/costumerside_menu"
-import ViewWaitlist from "../components/waitlist"
+import Reservation from "../components/customerReservationScreen"
+import Menu from "../components/costumerside_menu"
+import Waitlist from "../components/waitlist"
 
 // create bottom tab navigation 
 const Tab = createBottomTabNavigator();
@@ -21,21 +21,21 @@ const Group_Task_Navigator = (props) => {
     >
       <Tab.Screen
         name={"Menu"}
-        component={CostumerMenu}
+        component={Menu}
         options={{
           tabBarLabel: "Menu",
         }}
       />
       <Tab.Screen
         name="Reservation"
-        component={CustomerReservationScreen}
+        component={Reservation}
         options={{
           tabBarLabel: "Reservation",
         }}
       />
       <Tab.Screen
         name="Waitlist"
-        component={ViewWaitlist}
+        component={Waitlist}
         options={{
           tabBarLabel: "Waitlist",
         }}
