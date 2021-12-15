@@ -11,6 +11,8 @@ import Waitlist from './components/waitlist';
 import CustomerReservation from './components/customerReservationScreen';
 import Reservation from './components/reservation';
 import Confirmation from './components/confirmation';
+import Restaurant_waitlist from './components/restaurant_waitlist';
+import Restaurant_reservation from './components/Restaurant_reservation';
 
 import { NativeRouter, Route, Link } from "react-router-native";
 import { NavigationContainer } from '@react-navigation/native';
