@@ -23,7 +23,7 @@ export default function RestaurantLoginScreen({ navigation }) {
                             <FontAwesomeIcon icon={ faArrowRight } color={'white'} size={40} style={styles.SubmitIcon} onPress={() => {
                                                                                                                                         if(inputPassword == "12345") 
                                                                                                                                         {
-                                                                                                                                            navigation.navigate('Home');
+                                                                                                                                            navigation.navigate('Restaurant_waitlist');
                                                                                                                                             console.log("Password is Correct")
                                                                                                                                         }
                                                                                                                                         else

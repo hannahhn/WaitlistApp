@@ -10,7 +10,7 @@ const waitlist = () => {
         <View>
           <Text style={styles.header1}>Customer Wait List</Text>
         </View>
-        <View style={{ borderColor: 'white', borderWidth: 2, padding: 10 }}>
+        <View style={styles.boxBorder}>
           <Text style={styles.waitlist}>Name                                 Time </Text>
           <Text>1. John Doe                                   10:30 am </Text>
           <Text>2. Jason Losh                                 11:30 am </Text>
@@ -49,6 +49,11 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginTop: 25,
     marginBottom: 15
+  },
+  boxBorder: {
+    borderColor: 'white', 
+    borderWidth: 2, 
+    padding: 10
   },
   waitlist: {
     fontSize: 20,

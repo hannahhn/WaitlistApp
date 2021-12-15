@@ -26,13 +26,6 @@ function Logo() {
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
-    // <Navigator/>
-    // // <View style={styles.container}>
-    // //   <CustomerReservation/>
-    // //   {/*<Text>Hangry</Text>*/}
-    // //   <StatusBar style="auto" />
-    // // </View>
-    // <NavigationContainer initialRouteName="Home">
     <NavigationContainer initialRouteName="Landing Screen">
       <Stack.Navigator
         screenOptions={{
