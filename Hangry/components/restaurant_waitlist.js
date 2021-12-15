@@ -1,8 +1,17 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text } from 'react-native'
-import { Button, Alert, StyleSheet, Image, ImageBackground } from 'react-native'
+import { Button, Alert, StyleSheet, Image, ImageBackground, FlatList } from 'react-native'
 const restaurant_waitlist = ({ navigation }) => {
+
+  const [customerWaitlist, setCustomerWaitlist] = useState([
+    { name: 'John Doe', size: '3', key: '1' },
+    { name: 'Chris Cross', size: '2', key: '2' },
+    { name: 'Tu Yung', size: '1', key: '3' },
+    { name: 'Steph Bro', size: '6', key: '4' },
+    { name: 'Alex Ha', size: '4', key: '5' },
+  ]);
+
   return (
     <ImageBackground source={require('../assets/AppBackground.png')} style={styles.backgroundContainer}>
       <View style={styles.main}>
@@ -10,21 +19,33 @@ const restaurant_waitlist = ({ navigation }) => {
           <Text style={styles.header1}>Wait List</Text>
         </View>
         <View style={styles.boxBorder}>
-          <Text style={styles.waitlist}>Name                                                 Size </Text>
-          <Text>1. John Doe                                                               3 </Text>
-          <Text>2. Chris Cross                                                            2 </Text>
-          <Text>3. Tu Yung                                                                  1 </Text>
-          <Text>4. Steph Bro                                                              6 </Text>
-          <Text>5. Alex Ha                                                                  4 </Text>
+        <Text style={styles.waitlist}>  Name                               Size </Text>
+          <View style={styles.waitlistContainer}>
+            <View style={{ height: 500 }}>
+              <FlatList 
+                data={customerWaitlist}
+                contentContainerStyle={{ flexDirection: 'column-reverse' }}
+                renderItem={({ item }) => (
+                  <Text>{item.name}</Text>
+                )}
+              />
+            </View>
+            <View style={{ height: 500, marginRight: 110 }}>
+              <FlatList 
+                data={customerWaitlist}
+                contentContainerStyle={{ flexDirection: 'column-reverse' }}
+                renderItem={({ item }) => (
+                  <Text>{item.size}</Text>
+                )}
+              />
+            </View>
+          </View>
         </View> 
       </View>
 
       <View style={styles.buttonsContainer}>
         <View style={styles.editButtons}>
-          <Button title="Delete" onPress={() => Alert.alert('Edit Reservation')} color='white' style = {styles.edit}/>
-        </View>
-        <View style={styles.editButtons}>
-          <Button title="Submit" onPress={() => navigation.navigate('Confirmation')} color='white' style={styles.edit} />
+          <Button title="Edit" onPress={() => Alert.alert('Edit Reservation')} color='white' style = {styles.edit}/>
         </View>
       </View>
 
@@ -53,8 +74,6 @@ const styles = StyleSheet.create({
     marginBottom: 15
   },
   boxBorder: {
-    borderColor: 'white', 
-    borderWidth: 2, 
     padding: 10
   },
   waitlist: {
@@ -66,6 +85,13 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     marginBottom: 10
+  },
+  waitlistContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    padding: 5,
+    marginHorizontal: 10,
+    justifyContent: 'space-between'
   },
   containerMain: {
     flex: 1,

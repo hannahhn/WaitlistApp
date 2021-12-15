@@ -1,7 +1,7 @@
 
 import React, {useState} from 'react'
 import { SafeAreaView ,View, Text } from 'react-native'
-import { Button, Alert, StyleSheet, Image, ImageBackground } from 'react-native'
+import { Button, Alert, StyleSheet, Image, ImageBackground, FlatList } from 'react-native'
 import MenuImage from '../assets/menu.jpg';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -32,6 +32,14 @@ const reservation = ({ navigation }) => {
   //     showMode('time');
   //   };
 
+  const [customerReservationList, setcustomerReservationList] = useState([
+    { name: 'John Doe', size: '2', date: '12/1', time: '10:30 am', key: '1' },
+    { name: 'Jason Losh', size: '4', date: '12/4', time: '11:30 am', key: '2' },
+    { name: 'Sanjaya KC', size: '5', date: '12/3', time: '12:00 pm', key: '3' },
+    { name: 'Lucky Bhai', size: '1', date: '1/1', time: '2:00 pm', key: '4' },
+    { name: 'Mr. Monchite', size: '3', date: '1/2', time: '3:30 pm', key: '5' },
+  ]);
+
   return (   
     <ImageBackground source={require('../assets/AppBackground.png')} style={styles.backgroundContainer}>
       <View style={styles.main}>
@@ -39,21 +47,52 @@ const reservation = ({ navigation }) => {
             <Text style={styles.header}>Reservations</Text>
           </View>
           <View style={styles.boxBorder}>
-            <Text style={styles.waitlist}>Name                   Size              Date                Time </Text>
-            <Text style = {styles.name}>1. John Doe            2           12/1              10:30 am </Text>
-            <Text style = {styles.name}>2. Jason Losh        4           12/4              11:30 am </Text>
-            <Text style = {styles.name}>3. Sanjaya KC        5           12/3              12:00 pm </Text>
-            <Text style = {styles.name}>4. Lucky Bhai         1           1/1                02:00 pm </Text>
-            <Text style = {styles.name}>5. Mr. Monchite     3           1/2                03:30 pm </Text>
+            <Text style={styles.waitlist}>Name                    Size             Date            Time </Text>
+
+            <View style={styles.waitlistContainer}>
+              <View style={{ height: 500 }}>
+                <FlatList 
+                  data={customerReservationList}
+                  contentContainerStyle={{ flexDirection: 'column-reverse' }}
+                  renderItem={({ item }) => (
+                    <Text>{item.name}</Text>
+                  )}
+                />
+              </View>
+              <View style={{ height: 500, right: 10 }}>
+                <FlatList 
+                  data={customerReservationList}
+                  contentContainerStyle={{ flexDirection: 'column-reverse' }}
+                  renderItem={({ item }) => (
+                    <Text>{item.size}</Text>
+                  )}
+                />
+              </View>
+              <View style={{ height: 500 }}>
+                <FlatList 
+                  data={customerReservationList}
+                  contentContainerStyle={{ flexDirection: 'column-reverse' }}
+                  renderItem={({ item }) => (
+                    <Text>{item.date}</Text>
+                  )}
+                />
+              </View>
+              <View style={{ height: 500 }}>
+                <FlatList 
+                  data={customerReservationList}
+                  contentContainerStyle={{ flexDirection: 'column-reverse' }}
+                  renderItem={({ item }) => (
+                    <Text>{item.time}</Text>
+                  )}
+                />
+              </View>
+            </View>
           </View>
      </View>
 
       <View style={styles.buttonsContainer}>
         <View style={styles.editButtons}>
           <Button title="Edit" onPress={() => Alert.alert('Edit Reservation')} color="white"/>
-        </View>
-        <View style={styles.editButtons}>
-          <Button title="Submit" onPress={() => navigation.navigate('Confirmation')} color="white" />
         </View>
       </View>
 
@@ -82,8 +121,6 @@ const styles = StyleSheet.create({
     marginBottom: 15
   },
   boxBorder: {
-    borderColor: 'white', 
-    borderWidth: 2, 
     padding: 10
   },
   edit:{
@@ -98,6 +135,13 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     marginBottom: 10
+  },
+  waitlistContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    padding: 5,
+    marginHorizontal: 5,
+    justifyContent: 'space-between'
   },
   containerMain: {
     flex: 1,
