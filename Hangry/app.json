@@ -4,6 +4,7 @@
     "slug": "Hangry",
     "version": "1.0.0",
     "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
@@ -26,7 +27,11 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+       "build": {
+          "babel": {
+            "include": ["react-router-native"]
+          }
+      }
     }
   }
 }

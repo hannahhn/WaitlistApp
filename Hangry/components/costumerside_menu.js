@@ -15,9 +15,15 @@ const costumerside_menu = ({ navigation }) => {
       <Text style={styles.text}>Menu</Text>
       <Image source={MenuImage} style={styles.menuIcon}/>
       <View style={styles.bottomView}>
+<<<<<<< HEAD
         <Button title="Waitlist" onPress={() => navigation.navigate('Waitlist')} color="white" />
         <Button title="Menu" onPress={() => Alert.alert('Menu pressed')} color="white" />
         <Button title="Reservation" onPress={() => Alert.alert('Reservation pressed')} color="white" />
+=======
+        <Button title="Waitlist" onPress={() => navigation.navigate('Waitlist')} color="green" />
+        <Button title="Menu" onPress={() => Alert.alert('Menu pressed')} color="red" />
+        <Button title="Reservation" onPress={() => navigation.navigate('Reservation')} color="blue" />
+>>>>>>> 2e8a3252fc085810b570fb08b2afaf220a9bf139
       </View>
     </ImageBackground>
 
