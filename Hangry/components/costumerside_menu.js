@@ -9,15 +9,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const costumerside_menu = ({ navigation }) => {
   return (
     <ImageBackground source={require('../assets/AppBackground.png')} style={styles.backgroundContainer}>
-      {/* <View>
-        <Text style={styles.header}>Customer Side</Text>
-      </View> */}
       <Text style={styles.text}>Menu</Text>
       <Image source={MenuImage} style={styles.menuIcon}/>
       <View style={styles.bottomView}>
         <Button title="Waitlist" onPress={() => navigation.navigate('Waitlist')} color="white" />
         <Button title="Menu" onPress={() => Alert.alert('Menu pressed')} color="white" />
-        <Button title="Reservation" onPress={() => Alert.alert('Reservation pressed')} color="white" />
+        <Button title="Reservation" onPress={() => navigation.navigate('Reservation')} color="white" />
       </View>
     </ImageBackground>
 
