@@ -8,32 +8,33 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 const reservation = ({ navigation }) => {
-    const [date, setDate] = useState(new Date());
-    const [mode, setMode] = useState('date');
-    const [show, setShow] = useState(false);
 
-    const onChange = (event, selectedDate) => {
-      const currentDate = selectedDate || date;
-      setShow(Platform.OS === 'ios');
-      setDate(currentDate);
-    };
+  //   const [date, setDate] = useState(new Date());
+  //   const [mode, setMode] = useState('date');
+  //   const [show, setShow] = useState(false);
 
-    const showMode = (currentMode) => {
-      setShow(true);
-      setMode(currentMode);
-    };
+  //   const onChange = (event, selectedDate) => {
+  //     const currentDate = selectedDate || date;
+  //     setShow(Platform.OS === 'ios');
+  //     setDate(currentDate);
+  //   };
 
-    const showDatepicker = () => {
-      showMode('date');
-    };
+  //   const showMode = (currentMode) => {
+  //     setShow(true);
+  //     setMode(currentMode);
+  //   };
 
-    const showTimepicker = () => {
-      showMode('time');
-    };
+  //   const showDatepicker = () => {
+  //     showMode('date');
+  //   };
+
+  //   const showTimepicker = () => {
+  //     showMode('time');
+  //   };
 
   return (
     <React.Fragment>
-      <View>
+      {/* <View>
         <Text style={styles.header}>Restaurant User</Text>
       </View>
       <View style={styles.Datepicker}>
@@ -51,10 +52,29 @@ const reservation = ({ navigation }) => {
           display="default"
           onChange={onChange}
         />
-      )}
+      )} */
+      <View style={styles.main}>
+          <View>
+            <Text style={styles.header}>Customer Wait List</Text>
+          </View>
+          <View>
+            <Text style={styles.waitlist}>Name                   Size              Date                Time </Text>
+            <Text style = {styles.name}>1. John Doe            2           12/1              10:30 am </Text>
+            <Text style = {styles.name}>2. Jason Losh        4           12/4              11:30 am </Text>
+            <Text style = {styles.name}>3. Sanjaya KC        5           12/3              12:00 pm </Text>
+            <Text style = {styles.name}>4. Lucky Bhai         1           1/1                02:00 pm </Text>
+            <Text style = {styles.name}>5. Mr. Monchite     3           1/2                03:30 pm </Text>
+            
+          </View>
+     </View>
+
+
+      }
+
       <View style={styles.bottomView}>
+        <Button title="Edit" onPress={() => Alert.alert('Edit Reservation')} style = {styles.edit}/>
         <Button title="Submit" onPress={() => navigation.navigate('Confirmation')} color="white" />
-        <Button title="Waitlist" onPress={() => navigation.navigate('Waitlist')} color="black" />
+        <Button title="Waitlist" onPress={() => navigation.navigate('Restaurant_waitlist')} color="black" />
         <Button title="Menu" onPress={() => Alert.alert('Menu pressed')} color="purple" />
         {/* <Button title="Reservation" onPress={() => Alert.alert('Reservation pressed')} color="blue" /> */}
       </View>
@@ -76,6 +96,18 @@ const styles = StyleSheet.create({
     // bottom: 20
   },
 
+  edit:{
+    top: 80,
+
+  },
+  waitlist: {
+    top: 20
+  },
+
+  name: {
+    top: 20,
+  },
+
   menuIcon: {
 
     top: 50,
@@ -93,7 +125,7 @@ const styles = StyleSheet.create({
   },
   bottomView: {
     width: '100%',
-    height: 100,
+    height: 150,
     display: 'flex',
     backgroundColor: '#EE5407',
     justifyContent: 'space-around',
