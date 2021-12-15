@@ -27,7 +27,11 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+       "build": {
+          "babel": {
+            "include": ["react-router-native"]
+          }
+      }
     }
   }
 }
