@@ -1,11 +1,10 @@
 import React, {useContext, useEffect} from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-// import Group from "../components/Group";
-// import AntDesign from "react-native-vector-icons/AntDesign";
-// import MyTask from "../components/MyTask";
-// import Profile from "../components/Profile";
-import CustomerReservationScreen from "C:/Users/samvi/Desktop/School/Courses/CSE4317/WaitlistApp/Hangry/components/customerReservationScreen"
+import CustomerReservationScreen from "../components/customerReservationScreen"
+import CostumerMenu from "../components/costumerside_menu"
+import ViewWaitlist from "../components/waitlist"
+
 // create bottom tab navigation 
 const Tab = createBottomTabNavigator();
 
@@ -20,13 +19,13 @@ const Group_Task_Navigator = (props) => {
         inactiveTintColor: "#8B8B8B",
       }}
     >
-      {/* <Tab.Screen
+      <Tab.Screen
         name={"Menu"}
-        component={Menu}
+        component={CostumerMenu}
         options={{
           tabBarLabel: "Menu",
         }}
-      /> */}
+      />
       <Tab.Screen
         name="Reservation"
         component={CustomerReservationScreen}
@@ -34,16 +33,13 @@ const Group_Task_Navigator = (props) => {
           tabBarLabel: "Reservation",
         }}
       />
-      {/* <Tab.Screen
-        name={"Profile"}
-        component={Profile}
+      <Tab.Screen
+        name="Waitlist"
+        component={ViewWaitlist}
         options={{
-          tabBarLabel: "Profile",
-          tabBarIcon: ({ color }) => (
-            <AntDesign name="user" color={color} size={23} />
-          ),
+          tabBarLabel: "Waitlist",
         }}
-      /> */}
+      />
     </Tab.Navigator>
   );
 };
