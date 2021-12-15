@@ -10,7 +10,6 @@ const waitlist = () => {
         <View>
           <Text style={styles.header1}>Customer Wait List</Text>
         </View>
-<<<<<<< HEAD
         <View style={{ borderColor: 'white', borderWidth: 2, padding: 10 }}>
           <Text style={styles.waitlist}>Name                                 Time </Text>
           <Text>1. John Doe                                   10:30 am </Text>
@@ -18,16 +17,6 @@ const waitlist = () => {
           <Text>3. Sanjaya KC                                 12:00 pm </Text>
           <Text>4. Lucky Bhai                                 02:00 pm </Text>
           <Text>5. Mr. Monchite                               03:30 pm </Text>
-=======
-        <View>
-          <Text style={styles.waitlist}>Name                                                Size </Text>
-          <Text>1. John Doe                                                             4 </Text>
-        <Text>2. Travis Bakker                                                       7 </Text>
-          <Text>3. Sanjaya KC                                                           8 </Text>
-          <Text>4. Lucky Bhai                                                            3 </Text>
-          <Text>5. Mr. Monchite                                                        5 </Text>
-          <Text>6. Fadiah Qudah                                                       2 </Text>
->>>>>>> 2e8a3252fc085810b570fb08b2afaf220a9bf139
         </View>
       </View>
 

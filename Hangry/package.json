@@ -14,13 +14,10 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-native-fontawesome": "^0.2.7",
-<<<<<<< HEAD
     "@react-native-community/blur": "^3.6.0",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-navigation/bottom-tabs": "^6.0.9",
-=======
     "@react-native-community/datetimepicker": "3.5.2",
->>>>>>> 2e8a3252fc085810b570fb08b2afaf220a9bf139
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "expo": "~42.0.1",
